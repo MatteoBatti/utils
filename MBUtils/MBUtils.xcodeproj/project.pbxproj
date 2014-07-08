@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF19551D196CA375008833BF /* MBDiscartableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19551C196CA375008833BF /* MBDiscartableObject.m */; };
+		AF1C76F4196C9C3000DDEA01 /* MBCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1C76F3196C9C3000DDEA01 /* MBCache.m */; };
+		AF1C76F7196CA0C700DDEA01 /* MBDiscartableCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1C76F6196CA0C700DDEA01 /* MBDiscartableCache.m */; };
+		AF88A587196994240095B205 /* MBAssetsFolderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */; };
+		AF88A58A196994360095B205 /* MBRssParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A589196994360095B205 /* MBRssParser.m */; };
+		AF88A58D196994800095B205 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A58C196994800095B205 /* XMLDictionary.m */; };
+		AF88A5911969A03F0095B205 /* MBStringSubstitution.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A5901969A03F0095B205 /* MBStringSubstitution.m */; };
+		AF88A5941969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A5931969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m */; };
 		AF9EC3CF19604FFF004D0A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3CE19604FFF004D0A5A /* Foundation.framework */; };
 		AF9EC3D119604FFF004D0A5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3D019604FFF004D0A5A /* CoreGraphics.framework */; };
 		AF9EC3D319604FFF004D0A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3D219604FFF004D0A5A /* UIKit.framework */; };
@@ -19,7 +27,6 @@
 		AF9EC3EA19604FFF004D0A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3D219604FFF004D0A5A /* UIKit.framework */; };
 		AF9EC3F219604FFF004D0A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF9EC3F019604FFF004D0A5A /* InfoPlist.strings */; };
 		AF9EC3F419604FFF004D0A5A /* MBUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3F319604FFF004D0A5A /* MBUtilsTests.m */; };
-		AF9EC3FF1960503C004D0A5A /* MBAssetsFolderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF19551B196CA375008833BF /* MBDiscartableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDiscartableObject.h; sourceTree = "<group>"; };
+		AF19551C196CA375008833BF /* MBDiscartableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDiscartableObject.m; sourceTree = "<group>"; };
+		AF1C76F2196C9C3000DDEA01 /* MBCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCache.h; sourceTree = "<group>"; };
+		AF1C76F3196C9C3000DDEA01 /* MBCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCache.m; sourceTree = "<group>"; };
+		AF1C76F5196CA0C700DDEA01 /* MBDiscartableCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDiscartableCache.h; sourceTree = "<group>"; };
+		AF1C76F6196CA0C700DDEA01 /* MBDiscartableCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDiscartableCache.m; sourceTree = "<group>"; };
+		AF88A588196994360095B205 /* MBRssParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRssParser.h; sourceTree = "<group>"; };
+		AF88A589196994360095B205 /* MBRssParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRssParser.m; sourceTree = "<group>"; };
+		AF88A58B196994800095B205 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		AF88A58C196994800095B205 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		AF88A58F1969A03F0095B205 /* MBStringSubstitution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBStringSubstitution.h; sourceTree = "<group>"; };
+		AF88A5901969A03F0095B205 /* MBStringSubstitution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBStringSubstitution.m; sourceTree = "<group>"; };
+		AF88A5921969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+MBWebViewYouTubeVideo.h"; sourceTree = "<group>"; };
+		AF88A5931969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+MBWebViewYouTubeVideo.m"; sourceTree = "<group>"; };
 		AF9EC3CB19604FFF004D0A5A /* MBUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9EC3CE19604FFF004D0A5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF9EC3D019604FFF004D0A5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,10 +131,24 @@
 		AF9EC3D419604FFF004D0A5A /* MBUtils */ = {
 			isa = PBXGroup;
 			children = (
+				AF88A588196994360095B205 /* MBRssParser.h */,
+				AF88A589196994360095B205 /* MBRssParser.m */,
+				AF1C76F2196C9C3000DDEA01 /* MBCache.h */,
+				AF1C76F3196C9C3000DDEA01 /* MBCache.m */,
+				AF1C76F5196CA0C700DDEA01 /* MBDiscartableCache.h */,
+				AF1C76F6196CA0C700DDEA01 /* MBDiscartableCache.m */,
+				AF19551B196CA375008833BF /* MBDiscartableObject.h */,
+				AF19551C196CA375008833BF /* MBDiscartableObject.m */,
+				AF88A58B196994800095B205 /* XMLDictionary.h */,
+				AF88A58C196994800095B205 /* XMLDictionary.m */,
 				AF9EC3FD1960503C004D0A5A /* MBAssetsFolderUtils.h */,
 				AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */,
 				AF9EC3DD19604FFF004D0A5A /* MBAppDelegate.h */,
 				AF9EC3DE19604FFF004D0A5A /* MBAppDelegate.m */,
+				AF88A58F1969A03F0095B205 /* MBStringSubstitution.h */,
+				AF88A5901969A03F0095B205 /* MBStringSubstitution.m */,
+				AF88A5921969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.h */,
+				AF88A5931969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m */,
 				AF9EC3E019604FFF004D0A5A /* Images.xcassets */,
 				AF9EC3D519604FFF004D0A5A /* Supporting Files */,
 			);
@@ -245,9 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9EC3FF1960503C004D0A5A /* MBAssetsFolderUtils.m in Sources */,
+				AF88A58D196994800095B205 /* XMLDictionary.m in Sources */,
+				AF88A5911969A03F0095B205 /* MBStringSubstitution.m in Sources */,
+				AF88A58A196994360095B205 /* MBRssParser.m in Sources */,
 				AF9EC3DB19604FFF004D0A5A /* main.m in Sources */,
 				AF9EC3DF19604FFF004D0A5A /* MBAppDelegate.m in Sources */,
+				AF88A587196994240095B205 /* MBAssetsFolderUtils.m in Sources */,
+				AF19551D196CA375008833BF /* MBDiscartableObject.m in Sources */,
+				AF1C76F7196CA0C700DDEA01 /* MBDiscartableCache.m in Sources */,
+				AF88A5941969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m in Sources */,
+				AF1C76F4196C9C3000DDEA01 /* MBCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +488,7 @@
 				AF9EC3F919604FFF004D0A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF9EC3FA19604FFF004D0A5A /* Build configuration list for PBXNativeTarget "MBUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +497,7 @@
 				AF9EC3FC19604FFF004D0A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
