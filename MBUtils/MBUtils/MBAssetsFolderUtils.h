@@ -18,5 +18,4 @@
 + (NSArray *) getContentsPathOfDocumentFolder:(NSString *)folderName;
 + (NSArray *) getContentsPathOfDocumentFolder:(NSString *)folderName withExtension:(NSString *) extension;
 
-
 @end

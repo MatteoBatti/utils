@@ -16,10 +16,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     [MBAssetsFolderUtils createDocumentFolder:@"folder"];
-    DLog(@"%@", [MBAssetsFoldersUtils getContentsOfDocumentFolder:@"folder"]);
-    DLog(@"%@", [MBAssetsFoldersUtils getContentsOfDocumentFolder:@"folder" withExtension:@"png"]);
-    DLog(@"%@", [MBAssetsFoldersUtils getContentsPathOfDocumentFolder:@"folder"]);
-    DLog(@"%@", [MBAssetsFoldersUtils getContentsPathOfDocumentFolder:@"folder" withExtension:@"html"]);
+    DLog(@"%@", [MBAssetsFolderUtils getContentsOfDocumentFolder:@"folder"]);
+    DLog(@"%@", [MBAssetsFolderUtils
+                 getContentsOfDocumentFolder:@"folder" withExtension:@"png"]);
+    DLog(@"%@", [MBAssetsFolderUtils getContentsPathOfDocumentFolder:@"folder"]);
+    DLog(@"%@", [MBAssetsFolderUtils getContentsPathOfDocumentFolder:@"folder" withExtension:@"html"]);
     
     [MBAssetsFolderUtils removeDocumentFolder:@"ciccio"];
     
