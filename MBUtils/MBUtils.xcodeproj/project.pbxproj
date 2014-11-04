@@ -27,6 +27,11 @@
 		AF9EC3EA19604FFF004D0A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3D219604FFF004D0A5A /* UIKit.framework */; };
 		AF9EC3F219604FFF004D0A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF9EC3F019604FFF004D0A5A /* InfoPlist.strings */; };
 		AF9EC3F419604FFF004D0A5A /* MBUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3F319604FFF004D0A5A /* MBUtilsTests.m */; };
+		AFF461B519B314CE00588E9B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461AC19B314CE00588E9B /* Base64.m */; };
+		AFF461B619B314CE00588E9B /* MBImageGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461AE19B314CE00588E9B /* MBImageGallery.m */; };
+		AFF461B719B314CE00588E9B /* MBLazyLoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461B019B314CE00588E9B /* MBLazyLoadingImageView.m */; };
+		AFF461B819B314CE00588E9B /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461B219B314CE00588E9B /* NSData+MD5.m */; };
+		AFF461B919B314CE00588E9B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461B419B314CE00588E9B /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,16 @@
 		AF9EC3F319604FFF004D0A5A /* MBUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBUtilsTests.m; sourceTree = "<group>"; };
 		AF9EC3FD1960503C004D0A5A /* MBAssetsFolderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAssetsFolderUtils.h; sourceTree = "<group>"; };
 		AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAssetsFolderUtils.m; sourceTree = "<group>"; };
+		AFF461AB19B314A000588E9B /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		AFF461AC19B314CE00588E9B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		AFF461AD19B314CE00588E9B /* MBImageGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBImageGallery.h; sourceTree = "<group>"; };
+		AFF461AE19B314CE00588E9B /* MBImageGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBImageGallery.m; sourceTree = "<group>"; };
+		AFF461AF19B314CE00588E9B /* MBLazyLoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLazyLoadingImageView.h; sourceTree = "<group>"; };
+		AFF461B019B314CE00588E9B /* MBLazyLoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLazyLoadingImageView.m; sourceTree = "<group>"; };
+		AFF461B119B314CE00588E9B /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		AFF461B219B314CE00588E9B /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		AFF461B319B314CE00588E9B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		AFF461B419B314CE00588E9B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,26 +146,36 @@
 		AF9EC3D419604FFF004D0A5A /* MBUtils */ = {
 			isa = PBXGroup;
 			children = (
-				AF88A588196994360095B205 /* MBRssParser.h */,
-				AF88A589196994360095B205 /* MBRssParser.m */,
+				AFF461AB19B314A000588E9B /* Base64.h */,
+				AFF461AC19B314CE00588E9B /* Base64.m */,
+				AF9EC3E019604FFF004D0A5A /* Images.xcassets */,
+				AF9EC3DD19604FFF004D0A5A /* MBAppDelegate.h */,
+				AF9EC3DE19604FFF004D0A5A /* MBAppDelegate.m */,
+				AF9EC3FD1960503C004D0A5A /* MBAssetsFolderUtils.h */,
+				AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */,
 				AF1C76F2196C9C3000DDEA01 /* MBCache.h */,
 				AF1C76F3196C9C3000DDEA01 /* MBCache.m */,
 				AF1C76F5196CA0C700DDEA01 /* MBDiscartableCache.h */,
 				AF1C76F6196CA0C700DDEA01 /* MBDiscartableCache.m */,
 				AF19551B196CA375008833BF /* MBDiscartableObject.h */,
 				AF19551C196CA375008833BF /* MBDiscartableObject.m */,
-				AF88A58B196994800095B205 /* XMLDictionary.h */,
-				AF88A58C196994800095B205 /* XMLDictionary.m */,
-				AF9EC3FD1960503C004D0A5A /* MBAssetsFolderUtils.h */,
-				AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */,
-				AF9EC3DD19604FFF004D0A5A /* MBAppDelegate.h */,
-				AF9EC3DE19604FFF004D0A5A /* MBAppDelegate.m */,
+				AFF461AD19B314CE00588E9B /* MBImageGallery.h */,
+				AFF461AE19B314CE00588E9B /* MBImageGallery.m */,
+				AFF461AF19B314CE00588E9B /* MBLazyLoadingImageView.h */,
+				AFF461B019B314CE00588E9B /* MBLazyLoadingImageView.m */,
+				AF88A588196994360095B205 /* MBRssParser.h */,
+				AF88A589196994360095B205 /* MBRssParser.m */,
 				AF88A58F1969A03F0095B205 /* MBStringSubstitution.h */,
 				AF88A5901969A03F0095B205 /* MBStringSubstitution.m */,
+				AFF461B119B314CE00588E9B /* NSData+MD5.h */,
+				AFF461B219B314CE00588E9B /* NSData+MD5.m */,
+				AFF461B319B314CE00588E9B /* NSString+MD5.h */,
+				AFF461B419B314CE00588E9B /* NSString+MD5.m */,
+				AF9EC3D519604FFF004D0A5A /* Supporting Files */,
 				AF88A5921969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.h */,
 				AF88A5931969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m */,
-				AF9EC3E019604FFF004D0A5A /* Images.xcassets */,
-				AF9EC3D519604FFF004D0A5A /* Supporting Files */,
+				AF88A58B196994800095B205 /* XMLDictionary.h */,
+				AF88A58C196994800095B205 /* XMLDictionary.m */,
 			);
 			path = MBUtils;
 			sourceTree = "<group>";
@@ -281,15 +306,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF88A58D196994800095B205 /* XMLDictionary.m in Sources */,
+				AFF461B819B314CE00588E9B /* NSData+MD5.m in Sources */,
 				AF88A5911969A03F0095B205 /* MBStringSubstitution.m in Sources */,
 				AF88A58A196994360095B205 /* MBRssParser.m in Sources */,
 				AF9EC3DB19604FFF004D0A5A /* main.m in Sources */,
+				AFF461B719B314CE00588E9B /* MBLazyLoadingImageView.m in Sources */,
 				AF9EC3DF19604FFF004D0A5A /* MBAppDelegate.m in Sources */,
 				AF88A587196994240095B205 /* MBAssetsFolderUtils.m in Sources */,
 				AF19551D196CA375008833BF /* MBDiscartableObject.m in Sources */,
 				AF1C76F7196CA0C700DDEA01 /* MBDiscartableCache.m in Sources */,
 				AF88A5941969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m in Sources */,
+				AFF461B619B314CE00588E9B /* MBImageGallery.m in Sources */,
+				AFF461B919B314CE00588E9B /* NSString+MD5.m in Sources */,
 				AF1C76F4196C9C3000DDEA01 /* MBCache.m in Sources */,
+				AFF461B519B314CE00588E9B /* Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
