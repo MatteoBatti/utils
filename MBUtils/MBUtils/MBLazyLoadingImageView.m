@@ -72,7 +72,7 @@
         dispatch_sync(dispatch_get_main_queue(), ^{
             if (isDownloaded && animated) {
                 self.alpha = 0.0;
-                [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     self.alpha = 1.0;
                 } completion:^(BOOL finished) {
                     

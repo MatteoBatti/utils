@@ -22,6 +22,7 @@
 @synthesize  pathImages = _pathImages;
 @synthesize visibleImages = _visibleImages;
 @synthesize marginImages = _marginImages;
+@synthesize imageGalleryDelegate = _imageGalleryDelegate;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -63,10 +64,13 @@
     self.showsVerticalScrollIndicator = NO;
     
     // calculate contentSize
-    [self setContentSize:CGSizeMake((self.marginImages * (self.pathImages.count+1)) + (self.pathImages.count * (self.bounds.size.width / self.visibleImages)), 0)];
+    CGFloat sumMargin = (self.marginImages * (self.pathImages.count+1));
+    CGFloat sumImage = (self.pathImages.count * (self.bounds.size.width / self.visibleImages));
+    
+    [self setContentSize:CGSizeMake(self.marginImages + sumImage, 0)];
     
     // initial contentOffset
-    [self setContentOffset:CGPointMake(0, 0)];
+    [self setContentOffset:CGPointMake(self.marginImages/2, 0)];
 
     //
     [self performSelectorOnMainThread:@selector(updateGallery) withObject:nil waitUntilDone:NO];
@@ -90,56 +94,64 @@
 
 -(void) updateGallery
 {
-    CGRect visibleBounds = self.bounds;
-    NSInteger firstGalleryIndex = 0;
-    NSInteger lastGalleryIndex = 0;
-    firstGalleryIndex = floor(CGRectGetMinX(visibleBounds) / ((visibleBounds.size.width/self.visibleImages) + self.marginImages));
-    lastGalleryIndex  = floor(CGRectGetMaxX(visibleBounds) / ((visibleBounds.size.width/self.visibleImages) + self.marginImages));
-    firstGalleryIndex = MAX(firstGalleryIndex - 1, 0);
-    lastGalleryIndex = MIN(lastGalleryIndex + 1, self.pathImages.count - 1);
-    
-    // Recycle no-longer-visible pages
-    NSInteger firstPage = firstGalleryIndex;
-    NSInteger lastPage = lastGalleryIndex;
-    for(UIView* view in _visibleViews) {
-        if(view.tag < firstPage || view.tag > lastPage) {
-            [_recycledViews addObject:view];
-            [view removeFromSuperview];
-        }
+    if (self.pathImages) {
+        CGRect visibleBounds = self.bounds;
+        NSInteger firstGalleryIndex = 0;
+        NSInteger lastGalleryIndex = 0;
+        firstGalleryIndex = floor(CGRectGetMinX(visibleBounds) / ((visibleBounds.size.width/self.visibleImages) + self.marginImages));
+        lastGalleryIndex  = floor(CGRectGetMaxX(visibleBounds) / ((visibleBounds.size.width/self.visibleImages) + self.marginImages));
+        firstGalleryIndex = MAX(firstGalleryIndex - 1, 0);
+        lastGalleryIndex = MIN(lastGalleryIndex + 1, self.pathImages.count - 1);
         
-    }
-    [_visibleViews minusSet:_recycledViews];
-    
-    for(NSInteger currentPage = firstGalleryIndex; currentPage <= lastGalleryIndex; currentPage++) {
-        if(![self isDisplayingPageViewForPage:currentPage]) {
-            MBLazyLoadingImageView *imageView = [(MBLazyLoadingImageView*)[self dequeueRecycledPage] retain];
-            
-            if (!imageView) {
-                imageView = [[MBLazyLoadingImageView alloc] initWithFrame:CGRectZero];
-                [imageView setUserInteractionEnabled:YES];
-                imageView.tag = currentPage;
-                imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-                imageView.autoresizesSubviews = YES;
-                
-                UIButton *imageButton = [[UIButton alloc]initWithFrame:CGRectZero];
-                imageButton.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-                imageButton.autoresizesSubviews = YES;
-                [imageButton addTarget:self action:@selector(imageButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-                [imageView addSubview:imageButton];
-                [imageButton release];
+        // Recycle no-longer-visible pages
+        NSInteger firstPage = firstGalleryIndex;
+        NSInteger lastPage = lastGalleryIndex;
+        for(UIView* view in _visibleViews) {
+            if(view.tag < firstPage || view.tag > lastPage) {
+                [_recycledViews addObject:view];
+                [view removeFromSuperview];
             }
             
-            [self configureImageView:imageView forPage:currentPage];
-            [self addSubview:imageView];
-            [_visibleViews addObject:imageView];
-            [imageView release];
+        }
+        [_visibleViews minusSet:_recycledViews];
+        
+        for(NSInteger currentPage = firstGalleryIndex; currentPage <= lastGalleryIndex; currentPage++) {
+            if(![self isDisplayingPageViewForPage:currentPage]) {
+                MBLazyLoadingImageView *imageView = [(MBLazyLoadingImageView*)[self dequeueRecycledPage] retain];
+                
+                if (!imageView) {
+                    imageView = [[MBLazyLoadingImageView alloc] initWithFrame:CGRectZero];
+                    [imageView setContentMode:UIViewContentModeScaleAspectFill];
+                    imageView.clipsToBounds = YES;
+                    [imageView setUserInteractionEnabled:YES];
+                    imageView.tag = currentPage;
+                    imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+                    imageView.autoresizesSubviews = YES;
+                    
+                    UIButton *imageButton = [[UIButton alloc]initWithFrame:CGRectZero];
+                    imageButton.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+                    imageButton.autoresizesSubviews = YES;
+                    [imageButton addTarget:self action:@selector(imageButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+                    [imageView addSubview:imageButton];
+                    [imageButton release];
+                }
+                
+                [self configureImageView:imageView forPage:currentPage];
+                [self addSubview:imageView];
+                [_visibleViews addObject:imageView];
+                [imageView release];
+            }
         }
     }
+
 }
 
 
 -(void) configureImageView:(MBLazyLoadingImageView *)view forPage:(NSInteger) page
 {
+    // reset image
+    [view setImage:nil];
+    
     UIButton *button = nil;
     for (UIView *sv in view.subviews) {
         if ([sv isMemberOfClass:[UIButton class]]) {
@@ -154,6 +166,7 @@
     CGFloat originX = (self.marginImages*(page+1)) + page * imageWidth;
     CGFloat originY = self.marginImages;
     
+    
     view.frame = CGRectMake(originX,
                             originY,
                             imageWidth,
@@ -164,8 +177,9 @@
         button.tag = page;
     }
     
-    NSURL *imageUrl = [self.pathImages objectAtIndex:page];
-    [view setImageWithUrl:imageUrl animeted:YES];
+    NSString *imagePath = [self.pathImages objectAtIndex:page];
+    NSURL *imageUrl = [NSURL URLWithString:imagePath];
+    [view setImageWithUrl:imageUrl animeted:NO];
     view.tag = page;
     [self setNeedsDisplay];
 }
@@ -194,7 +208,9 @@
 
 -(void)imageButtonClicked:(UIButton *)button
 {
-    DLog(@"image %i", button.tag);
+    if (self.imageGalleryDelegate && [self.imageGalleryDelegate respondsToSelector:@selector(selectedImageURL:)]) {
+        [self.imageGalleryDelegate selectedImageURL:_pathImages[button.tag]];
+    }
 }
 
 @end
