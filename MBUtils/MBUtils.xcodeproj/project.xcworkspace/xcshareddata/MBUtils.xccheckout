@@ -10,29 +10,29 @@
 	<string>MBUtils</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E0EF22F4-0221-40D4-8553-E3F97F8F3F44</key>
+		<key>5CB1DE47A1B085F8436122E8720A36B7D977529D</key>
 		<string>https://github.com/MatteoBatti/utils.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MBUtils/MBUtils.xcodeproj/project.xcworkspace</string>
+	<string>MBUtils/MBUtils.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E0EF22F4-0221-40D4-8553-E3F97F8F3F44</key>
+		<key>5CB1DE47A1B085F8436122E8720A36B7D977529D</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/MatteoBatti/utils.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E0EF22F4-0221-40D4-8553-E3F97F8F3F44</string>
+	<string>5CB1DE47A1B085F8436122E8720A36B7D977529D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E0EF22F4-0221-40D4-8553-E3F97F8F3F44</string>
+			<string>5CB1DE47A1B085F8436122E8720A36B7D977529D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>utils</string>
 		</dict>

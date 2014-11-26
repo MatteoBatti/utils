@@ -40,6 +40,12 @@
     return self;
 }
 
+-(void)dealloc
+{
+    [_cache release];
+    [super dealloc];
+}
+
 -(id)getCachedResourceForKey:(id)key
 {
     return [_cache objectForKey:key];
