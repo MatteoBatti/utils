@@ -12,7 +12,7 @@
 		AF1C76F7196CA0C700DDEA01 /* MBDiscartableCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1C76F6196CA0C700DDEA01 /* MBDiscartableCache.m */; };
 		AF88A587196994240095B205 /* MBAssetsFolderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3FE1960503C004D0A5A /* MBAssetsFolderUtils.m */; };
 		AF88A58A196994360095B205 /* MBRssParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A589196994360095B205 /* MBRssParser.m */; };
-		AF88A58D196994800095B205 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A58C196994800095B205 /* XMLDictionary.m */; };
+		AF88A58D196994800095B205 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A58C196994800095B205 /* XMLDictionary.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		AF88A5911969A03F0095B205 /* MBStringSubstitution.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A5901969A03F0095B205 /* MBStringSubstitution.m */; };
 		AF88A5941969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88A5931969AED80095B205 /* UIWebView+MBWebViewYouTubeVideo.m */; };
 		AF9EC3CF19604FFF004D0A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3CE19604FFF004D0A5A /* Foundation.framework */; };
@@ -27,7 +27,7 @@
 		AF9EC3EA19604FFF004D0A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9EC3D219604FFF004D0A5A /* UIKit.framework */; };
 		AF9EC3F219604FFF004D0A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF9EC3F019604FFF004D0A5A /* InfoPlist.strings */; };
 		AF9EC3F419604FFF004D0A5A /* MBUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9EC3F319604FFF004D0A5A /* MBUtilsTests.m */; };
-		AFF461B519B314CE00588E9B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461AC19B314CE00588E9B /* Base64.m */; };
+		AFF461B519B314CE00588E9B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461AC19B314CE00588E9B /* Base64.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		AFF461B619B314CE00588E9B /* MBImageGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461AE19B314CE00588E9B /* MBImageGallery.m */; };
 		AFF461B719B314CE00588E9B /* MBLazyLoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461B019B314CE00588E9B /* MBLazyLoadingImageView.m */; };
 		AFF461B819B314CE00588E9B /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF461B219B314CE00588E9B /* NSData+MD5.m */; };
